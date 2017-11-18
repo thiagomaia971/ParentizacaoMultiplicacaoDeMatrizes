@@ -7,7 +7,12 @@ import java.util.ArrayList;
 
 public class ParentizadorPorAlgoritmoGuloso implements IParentizador {
     @Override
-    public void processarArquivo(ArrayList<ArquivoEntrada> arquivosDeEntrada) {
+    public void processarArquivo(ArquivoEntrada arquivosDeEntrada) {
+
+    }
+
+    @Override
+    public void printar() {
 
     }
 }

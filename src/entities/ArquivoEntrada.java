@@ -16,7 +16,7 @@ public class ArquivoEntrada {
         this.dadosDasInstancias = new ArrayList<DadoIntancia>();
     }
 
-    public void processarFileSelecionado(File file) throws IOException {
+    public void processarFileSelected(File file) throws IOException {
         ArrayList<String> linhas = _gerenciadorDeIO.getStrings(file.getAbsolutePath());
         this.quantidadeDeInstancias = Integer.parseInt(linhas.get(0));
         linhas.remove(0);
@@ -28,4 +28,6 @@ public class ArquivoEntrada {
     public int getQuantidadeDeInstancias() {
         return quantidadeDeInstancias;
     }
+
+    public ArrayList<DadoIntancia> getDadosDasInstancias() { return dadosDasInstancias; }
 }

@@ -1,12 +1,17 @@
 package entities;
 
+import java.util.Arrays;
+
 public class DadoIntancia {
-    private String[] values;
+    private int[] values;
     public DadoIntancia(String linha) {
-        this.values = linha.split(" ");
+//        this.values = Arrays.stream(linha.split(" ")).map(x -> Integer.getInteger(x));
+        String[] a = linha.split(" ");
+        this.values = Arrays.copyOfRange(a, 0, a.length, int[].class);
     }
 
-    public String[] getValues() {
+    public int[] getValues() {
         return values;
+
     }
 }

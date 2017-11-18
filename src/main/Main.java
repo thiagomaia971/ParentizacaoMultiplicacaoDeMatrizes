@@ -21,11 +21,12 @@ public class Main {
 
     public static void main(String[] args) {
         prepararServicos();
-        File[] arquivosSelecionados = _selecionadorDeArquivoEntrada.selecionarArquivosParaProcessar();
-        ArrayList<ArquivoEntrada> arquivosDeEntrada = processarFiles(arquivosSelecionados);
+        File arquivosSelecionados = _selecionadorDeArquivoEntrada.selecionarArquivoParaProcessar();
+        ArquivoEntrada arquivosDeEntrada = lerArquivoSelecionado(arquivosSelecionados);
 
         for (IParentizador parentizador : _parentizadores) {
             parentizador.processarArquivo(arquivosDeEntrada);
+            parentizador.printar();
         }
     }
 
@@ -39,17 +40,14 @@ public class Main {
         _parentizadores.add(new ParentizadorPorAlgoritmoGuloso());
     }
 
-    private static ArrayList<ArquivoEntrada> processarFiles(File[] files) {
-        ArrayList<ArquivoEntrada> arquivosDeEntrada = new ArrayList<ArquivoEntrada>();
-        for (int i = 0; i < files.length; i++) {
-            try {
-                ArquivoEntrada arquivoEntrada = new ArquivoEntrada(_gerenciadorDeIO);
-                arquivoEntrada.processarFileSelecionado(files[i]);
-                arquivosDeEntrada.add(arquivoEntrada);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+    private static ArquivoEntrada lerArquivoSelecionado(File file) {
+        try {
+            ArquivoEntrada arquivoEntrada = new ArquivoEntrada(_gerenciadorDeIO);
+            arquivoEntrada.processarFileSelected(file);
+            return arquivoEntrada;
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        return arquivosDeEntrada;
+        return null;
     }
 }
