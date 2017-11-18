@@ -1,6 +1,5 @@
 package services;
 
-import interfaces.ILog;
 import utils.GlobalVariables;
 
 import java.io.File;
@@ -11,11 +10,10 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Log implements ILog {
+public class Log {
     private static Date date = new Date();
 
-    @Override
-    public void print(String mensagem) {
+    public static void print(String mensagem) {
         System.out.print(mensagem);
         File file = new File(GlobalVariables.LOCAL_LOG + "RESULTADO_" + identificador() + ".txt");
 
@@ -28,8 +26,7 @@ public class Log implements ILog {
         }
     }
 
-    @Override
-    public void println(String mensagem) {
+    public static void println(String mensagem) {
         System.out.println(mensagem);
         File file = new File(GlobalVariables.LOCAL_LOG + "RESULTADO_" + identificador() + ".txt");
         try {

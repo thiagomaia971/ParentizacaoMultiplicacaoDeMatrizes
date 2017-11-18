@@ -1,17 +1,17 @@
-package services;
+package services.parentizadores;
 
 import entities.ArquivoEntrada;
 import entities.DadoIntancia;
 import interfaces.IParentizador;
-
-import java.util.ArrayList;
+import services.Log;
 
 public class ParentizadorPorProgramacaoDinamica implements IParentizador {
     @Override
     public void processarArquivo(ArquivoEntrada arquivoDeEntrada) {
-        for (DadoIntancia instancia : arquivoDeEntrada.getDadosDasInstancias()) {
+        Log.println("Iniciando algoritmo por Programação Dinâmica!");
+        for (DadoIntancia instancia : arquivoDeEntrada.getInstancias()) {
             int n = instancia.getValues().length;
-            int[][] m = new int[n - 1][n - 1];
+            int[][] m = new int[n][n];
             for (int l = 2; l < n; l++) {
                 for (int i = 0; i < n - l + 1; i++) {
                     int j = i + l - 1;

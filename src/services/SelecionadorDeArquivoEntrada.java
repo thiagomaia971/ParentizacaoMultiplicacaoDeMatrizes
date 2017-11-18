@@ -1,6 +1,5 @@
 package services;
 
-import interfaces.ILog;
 import interfaces.ISelecionadorDeArquivoEntrada;
 import utils.GlobalVariables;
 
@@ -8,11 +7,9 @@ import java.io.File;
 import java.util.Scanner;
 
 public class SelecionadorDeArquivoEntrada implements ISelecionadorDeArquivoEntrada {
-    private ILog _logger;
     private String _inputPath;
 
-    public SelecionadorDeArquivoEntrada(ILog logger, String inputPath) {
-        _logger = logger;
+    public SelecionadorDeArquivoEntrada(String inputPath) {
         _inputPath = inputPath;
     }
 
@@ -20,12 +17,12 @@ public class SelecionadorDeArquivoEntrada implements ISelecionadorDeArquivoEntra
     public File[] selecionarArquivosParaProcessar() {
         Scanner scanner = new Scanner(System.in);
 
-        _logger.println("Pasta onde está localizado os arquivos input's: ");
-        _logger.println(GlobalVariables.absolutePathProjectArquivoEntrada);
-        _logger.println("");
+        Log.println("Pasta onde está localizado os arquivos input's: ");
+        Log.println(GlobalVariables.absolutePathProjectArquivoEntrada);
+        Log.println("");
 
-        _logger.println("Arquivos localizados: ");
-        _logger.println("0. Começar");
+        Log.println("Arquivos localizados: ");
+        Log.println("0. Começar");
 
         File[] directores = todosOsArquivosDisponiveis();
         printarTodosOsArquivos(directores);
@@ -44,7 +41,7 @@ public class SelecionadorDeArquivoEntrada implements ISelecionadorDeArquivoEntra
             quantidadeSelecionados++;
         } while (indexSelecionado != 0);
 
-        _logger.println("\nArquivos selecionados:");
+        Log.println("\nArquivos selecionados:");
         printarTodosOsArquivos(arquivosSelecionados);
 
         return arquivosSelecionados;
@@ -54,11 +51,11 @@ public class SelecionadorDeArquivoEntrada implements ISelecionadorDeArquivoEntra
     public File selecionarArquivoParaProcessar() {
         Scanner scanner = new Scanner(System.in);
 
-        _logger.println("Pasta onde está localizado os arquivos input's: ");
-        _logger.println(GlobalVariables.absolutePathProjectArquivoEntrada);
-        _logger.println("");
+        Log.println("Pasta onde está localizado os arquivos input's: ");
+        Log.println(GlobalVariables.absolutePathProjectArquivoEntrada);
+        Log.println("");
 
-        _logger.println("Arquivos localizados: ");
+        Log.println("Arquivos localizados: ");
 
         File[] directores = todosOsArquivosDisponiveis();
         printarTodosOsArquivos(directores);
@@ -71,10 +68,10 @@ public class SelecionadorDeArquivoEntrada implements ISelecionadorDeArquivoEntra
             indexSelecionado = scanner.nextInt();
             if (indexSelecionado > 0)
                 arquivoSelecionado = directores[indexSelecionado - 1];
-        } while (indexSelecionado != 0);
+        } while (arquivoSelecionado == null);
 
-        _logger.println("\nArquivo selecionado:");
-        printarArquivo(arquivoSelecionado);
+        Log.println("\nArquivo selecionado:");
+        printarArquivo(arquivoSelecionado, null);
 
         return arquivoSelecionado;
     }
@@ -88,11 +85,13 @@ public class SelecionadorDeArquivoEntrada implements ISelecionadorDeArquivoEntra
 
     private void printarTodosOsArquivos(File[] directores) {
         for (int i = 0; i < directores.length; i++)
-            printarArquivo(directores[i]);
+            printarArquivo(directores[i], i + 1);
     }
 
-    private void printarArquivo(File directore) {
-        if (directore != null)
-            _logger.println(String.format("%s", directore.getName()));
+    private void printarArquivo(File directore, Integer i) {
+        if (directore != null && i != null)
+            Log.println(String.format("%s. %s", i, directore.getName()));
+        else if (directore != null)
+            Log.println(String.format("%s", directore.getName()));
     }
 }

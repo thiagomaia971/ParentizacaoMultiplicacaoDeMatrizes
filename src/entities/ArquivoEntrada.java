@@ -8,12 +8,12 @@ import java.util.ArrayList;
 
 public class ArquivoEntrada {
     private int quantidadeDeInstancias;
-    private ArrayList<DadoIntancia> dadosDasInstancias;
+    private ArrayList<DadoIntancia> instancias;
     private IGerenciadorDeIO _gerenciadorDeIO;
 
     public ArquivoEntrada(IGerenciadorDeIO gerenciadorDeIO) {
         this._gerenciadorDeIO = gerenciadorDeIO;
-        this.dadosDasInstancias = new ArrayList<DadoIntancia>();
+        this.instancias = new ArrayList<DadoIntancia>();
     }
 
     public void processarFileSelected(File file) throws IOException {
@@ -21,7 +21,7 @@ public class ArquivoEntrada {
         this.quantidadeDeInstancias = Integer.parseInt(linhas.get(0));
         linhas.remove(0);
         for (String linha : linhas) {
-            this.dadosDasInstancias.add(new DadoIntancia(linha));
+            this.instancias.add(new DadoIntancia(linha));
         }
     }
 
@@ -29,5 +29,5 @@ public class ArquivoEntrada {
         return quantidadeDeInstancias;
     }
 
-    public ArrayList<DadoIntancia> getDadosDasInstancias() { return dadosDasInstancias; }
+    public ArrayList<DadoIntancia> getInstancias() { return instancias; }
 }

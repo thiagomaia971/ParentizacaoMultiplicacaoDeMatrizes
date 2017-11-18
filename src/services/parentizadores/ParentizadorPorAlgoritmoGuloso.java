@@ -1,4 +1,4 @@
-package services;
+package services.parentizadores;
 
 import entities.ArquivoEntrada;
 import interfaces.IParentizador;

@@ -2,10 +2,11 @@ package main;
 
 import entities.ArquivoEntrada;
 import interfaces.IGerenciadorDeIO;
-import interfaces.ILog;
 import interfaces.IParentizador;
 import interfaces.ISelecionadorDeArquivoEntrada;
 import services.*;
+import services.parentizadores.ParentizadorPorAlgoritmoGuloso;
+import services.parentizadores.ParentizadorPorProgramacaoDinamica;
 import utils.GlobalVariables;
 
 import java.io.File;
@@ -14,7 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    private static ILog logger;
     private static ISelecionadorDeArquivoEntrada _selecionadorDeArquivoEntrada;
     private static List<IParentizador> _parentizadores;
     private static IGerenciadorDeIO _gerenciadorDeIO;
@@ -31,8 +31,7 @@ public class Main {
     }
 
     private static void prepararServicos() {
-        logger = new Log();
-        _selecionadorDeArquivoEntrada = new SelecionadorDeArquivoEntrada(logger, GlobalVariables.absolutePathProjectArquivoEntrada);
+        _selecionadorDeArquivoEntrada = new SelecionadorDeArquivoEntrada(GlobalVariables.absolutePathProjectArquivoEntrada);
         _gerenciadorDeIO = new GerenciadorDeIO();
 
         _parentizadores = new ArrayList<IParentizador>();
