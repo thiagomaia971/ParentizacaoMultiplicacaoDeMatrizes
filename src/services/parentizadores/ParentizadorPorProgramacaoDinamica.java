@@ -20,7 +20,7 @@ public class ParentizadorPorProgramacaoDinamica implements IParentizador {
                 for (int i = 0; i < n - l; i++) {
                     int j = i + l;
                     m[i][j] = Integer.MAX_VALUE;
-                    for (int k = i; k < j - 1; k++) {
+                    for (int k = i; k < j; k++) {
                         int q = m[i][k] + m[k + 1][j] + (p[i] * p[k] * p[j]);
                         if (q < m[i][j]) {
                             m[i][j] = q;
