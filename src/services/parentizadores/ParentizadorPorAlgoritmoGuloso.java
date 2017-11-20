@@ -11,7 +11,6 @@ public class ParentizadorPorAlgoritmoGuloso implements IParentizador {
 
     }
 
-    @Override
     public void printar() {
 
     }

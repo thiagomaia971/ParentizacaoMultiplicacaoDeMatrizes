@@ -26,7 +26,6 @@ public class Main {
 
         for (IParentizador parentizador : _parentizadores) {
             parentizador.processarArquivo(arquivosDeEntrada);
-            parentizador.printar();
         }
     }
 

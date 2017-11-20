@@ -10,24 +10,39 @@ public class ParentizadorPorProgramacaoDinamica implements IParentizador {
     public void processarArquivo(ArquivoEntrada arquivoDeEntrada) {
         Log.println("Iniciando algoritmo por Programação Dinâmica!");
         for (DadoIntancia instancia : arquivoDeEntrada.getInstancias()) {
-            int n = instancia.getValues().length;
+            int[] p = instancia.getValues();
+            int n = p.length;
+
             int[][] m = new int[n][n];
-            for (int l = 2; l < n; l++) {
-                for (int i = 0; i < n - l + 1; i++) {
-                    int j = i + l - 1;
+            int[][] s = new int[n][n];
+
+            for (int l = 1; l < n; l++) {
+                for (int i = 0; i < n - l; i++) {
+                    int j = i + l;
                     m[i][j] = Integer.MAX_VALUE;
-                    for (int k = 0; k < j - 1; k++) {
-                        int q = m[i][k] + m[k + 1][j] + (instancia.getValues()[i-1]);
+                    for (int k = i; k < j - 1; k++) {
+                        int q = m[i][k] + m[k + 1][j] + (p[i] * p[k] * p[j]);
+                        if (q < m[i][j]) {
+                            m[i][j] = q;
+                            s[i][j] = k;
+                        }
                     }
                 }
             }
 
+            printar(s, 0, p.length - 1);
         }
     }
 
-    @Override
-    public void printar() {
-
+    public void printar(int[][] s, int i, int j) {
+        if (i == j)
+            Log.print("A" + i);
+        else {
+            Log.print("(");
+            printar(s, i, s[i][j]);
+            printar(s, s[i][j] + 1, j);
+            Log.print(")");
+        }
     }
 
 }

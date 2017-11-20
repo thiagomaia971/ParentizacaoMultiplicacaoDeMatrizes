@@ -6,5 +6,4 @@ import java.util.ArrayList;
 
 public interface IParentizador {
     void processarArquivo(ArquivoEntrada arquivoDeEntrada);
-    void printar();
 }
