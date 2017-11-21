@@ -34,7 +34,7 @@ public class Main {
         _gerenciadorDeIO = new GerenciadorDeIO();
 
         _parentizadores = new ArrayList<IParentizador>();
-        _parentizadores.add(new ParentizadorPorProgramacaoDinamica());
+//        _parentizadores.add(new ParentizadorPorProgramacaoDinamica());
         _parentizadores.add(new ParentizadorPorAlgoritmoGuloso());
     }
 
