@@ -1,19 +1,15 @@
 package entities;
 
 public class Parentizacao {
-    private int linha;
-    private int coluna;
+    private Matriz left;
+    private Matriz rigth;
 
-    public Parentizacao(int i, int i1) {
-        linha = i;
-        coluna = i1;
+    public Parentizacao(Matriz matriz, Matriz matriz1) {
+        left = matriz;
+        rigth = matriz1;
     }
 
-    public int getLinha() {
-        return linha;
-    }
-
-    public int getColuna() {
-        return coluna;
+    public Parentizacao(Matriz matriz) {
+        left = matriz;
     }
 }
