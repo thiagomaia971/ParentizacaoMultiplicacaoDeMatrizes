@@ -1,0 +1,13 @@
+Pasta onde está localizado os arquivos input's: 
+C:\Users\thiag\Documents\Workspace\ParentizacaoMultiplicacaoDeMatrizes\ENTRADAS/
+
+Arquivos localizados: 
+1. entrada.txt
+
+Arquivo selecionado:
+entrada.txt
+
+##Parentização de Matrizes por Algoritmo Guloso: 
+((A1A2)(A3))
+((A1A2)(A3A4))
+((A1)(A2A3)(A4A5))
