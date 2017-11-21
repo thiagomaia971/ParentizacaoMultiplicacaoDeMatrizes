@@ -7,6 +7,7 @@ import entities.Parentizacao;
 import interfaces.IParentizador;
 import services.Log;
 
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,12 +18,44 @@ public class ParentizadorPorAlgoritmoGuloso implements IParentizador {
 
         for (DadoIntancia instancia : arquivosDeEntrada.getInstancias()) {
             int[] p = instancia.getValues();
-            List<Matriz> matrizes = carregarMatrizes(p);
-            List<Parentizacao> parentizacaos = carregarParentizacoes(matrizes);
-            int valorTotalParentizacoes = carregarValorTotalParentizacoes(parentizacaos);
+
+            Log.print(" " + c(p, 0, p.length - 1));
+
+//            List<Matriz> matrizes = carregarMatrizes(p);
+//            List<Parentizacao> parentizacaos = carregarParentizacoes(matrizes);
+//            int valorTotalParentizacoes = carregarValorTotalParentizacoes(parentizacaos);
 
             Log.println("");
         }
+    }
+
+    private int c(int[] p, int i, int j) {
+        if (i + 2 == j)
+            return p[i] * p[i + 1] * p[j];
+
+        Log.print("(");
+
+        int left = p[i] * p[i + 1] * p[j];
+        int rigth = c(p, i + 1, j);
+
+        Log.print(")");
+        return left;
+
+//        int m = (i + j) / 2;
+//        if (m == 1) {
+//            Log.print("A" + (i + 1) + "A" + (j) + ")");
+//            return p[i] * p[i+1] * p[j];
+//        }
+//
+//        int left = c(p, i, m);
+//        int rigth = c(p, m, j);
+//
+//        Log.print("(A" + i + "A" + m + ")");
+//        if (left > rigth) {
+//            Log.print("(A" + m + "A" + m + ")");
+//            return left + rigth;
+//        }
+//        return left;
     }
 
     private List<Matriz> carregarMatrizes(int[] p) {
@@ -39,7 +72,7 @@ public class ParentizadorPorAlgoritmoGuloso implements IParentizador {
 
         for (int i = 1; i < matrizes.size(); i++) {
             if (i >= matrizes.size() - 1) {
-                printarParentizacao(matrizes, i -1, i);
+                printarParentizacao(matrizes, i - 1, i);
                 continue;
             }
 
@@ -51,13 +84,13 @@ public class ParentizadorPorAlgoritmoGuloso implements IParentizador {
             int valorParentizacaoADireita = midle.getLinha() * midle.getColuna() * rigth.getColuna();
 
             if (valorParentizacaoAEsquerda < valorParentizacaoADireita) {
-                parentizacoes.add(new Parentizacao(matrizes.get(i-1), matrizes.get(i)));
-                printarParentizacao(matrizes, i -1, i);
+                parentizacoes.add(new Parentizacao(matrizes.get(i - 1), matrizes.get(i)));
+                printarParentizacao(matrizes, i - 1, i);
             } else {
-                parentizacoes.add(new Parentizacao(matrizes.get(i-1)));
+                parentizacoes.add(new Parentizacao(matrizes.get(i - 1)));
                 parentizacoes.add(new Parentizacao(matrizes.get(i), matrizes.get(i + 1)));
 
-                printarParentizacao(matrizes, i -1);
+                printarParentizacao(matrizes, i - 1);
                 printarParentizacao(matrizes, i, i + 1);
 
                 i++;
