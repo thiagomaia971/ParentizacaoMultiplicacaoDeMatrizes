@@ -23,6 +23,7 @@ public class ParentizadorPorAlgoritmoGuloso implements IParentizador {
         }
     }
 
+    // n = (j - i)  => (1, p.length - 1)
     private int c(int[] p, int i, int j) {
         if (i == j) {
             Log.print("A" + i);
@@ -31,9 +32,9 @@ public class ParentizadorPorAlgoritmoGuloso implements IParentizador {
         int valor = p[i - 1] * p[i] * p[j];
         int auxK = i;
 
-        for (int k = i; k < j - i + 1; k++) {
-            int x = p[i - 1] * p[k] * p[j];
-            if (x < valor){
+        for (int k = i; k < j - i + 1; k++) {  // n + 1
+            int x = p[i - 1] * p[k] * p[j];    // n
+            if (x < valor){                    
                 valor = x;
                 auxK = k;
             }
