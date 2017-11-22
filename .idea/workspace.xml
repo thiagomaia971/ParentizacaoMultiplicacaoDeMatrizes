@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4df633c6-99c7-4a44-b19a-44c9fba89687" name="Default" comment="" />
+    <list default="true" id="4df633c6-99c7-4a44-b19a-44c9fba89687" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/parentizadores/ParentizadorPorAlgoritmoGuloso.java" afterPath="$PROJECT_DIR$/src/services/parentizadores/ParentizadorPorAlgoritmoGuloso.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,12 +22,11 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
+            <state relative-caret-position="493">
               <caret line="41" column="13" lean-forward="false" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1511307595286" expanded="true" signature="1340:1483" ph="{...}" />
-                <marker date="1511307595286" expanded="true" signature="1552:1844" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -34,7 +35,7 @@
       <file leaf-file-name="ParentizadorPorProgramacaoDinamica.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/services/parentizadores/ParentizadorPorProgramacaoDinamica.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="374">
               <caret line="22" column="41" lean-forward="false" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -46,8 +47,8 @@
       <file leaf-file-name="ParentizadorPorAlgoritmoGuloso.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/services/parentizadores/ParentizadorPorAlgoritmoGuloso.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="36" column="27" lean-forward="false" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+            <state relative-caret-position="68">
+              <caret line="30" column="42" lean-forward="false" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -58,7 +59,7 @@
       <file leaf-file-name="Log.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/services/Log.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
+            <state relative-caret-position="374">
               <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
@@ -83,7 +84,8 @@
             <state relative-caret-position="34">
               <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
-                <marker date="1511307595270" expanded="true" signature="541:547" ph="{...}" />
+                <element signature="e#503#504#0" expanded="true" />
+                <element signature="e#546#547#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -167,10 +169,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -223,6 +221,10 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -377,7 +379,6 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279743" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -399,6 +400,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279743" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889125" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -418,7 +420,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/services/parentizadores/ParentizadorPorAlgoritmoGuloso.java</url>
-          <line>27</line>
+          <line>38</line>
           <properties />
           <option name="timeStamp" value="44" />
         </line-breakpoint>
@@ -467,7 +469,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1511307595286" expanded="true" signature="1340:1483" ph="{...}" />
-            <marker date="1511307595286" expanded="true" signature="1552:1844" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -479,7 +480,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1511307595286" expanded="true" signature="1340:1483" ph="{...}" />
-            <marker date="1511307595286" expanded="true" signature="1552:1844" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -584,7 +584,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1511307595286" expanded="true" signature="1340:1483" ph="{...}" />
-            <marker date="1511307595286" expanded="true" signature="1552:1844" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -596,7 +595,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1511307595286" expanded="true" signature="1340:1483" ph="{...}" />
-            <marker date="1511307595286" expanded="true" signature="1552:1844" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -632,7 +630,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1511307595286" expanded="true" signature="1340:1483" ph="{...}" />
-            <marker date="1511307595286" expanded="true" signature="1552:1844" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -668,7 +665,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1511307595286" expanded="true" signature="1340:1483" ph="{...}" />
-            <marker date="1511307595286" expanded="true" signature="1552:1844" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -704,7 +700,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1511307595286" expanded="true" signature="1340:1483" ph="{...}" />
-            <marker date="1511307595286" expanded="true" signature="1552:1844" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -784,12 +779,11 @@
     <entry file="file://$PROJECT_DIR$/src/entities/Parentizacao.java" />
     <entry file="file://$PROJECT_DIR$/src/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
+        <state relative-caret-position="493">
           <caret line="41" column="13" lean-forward="false" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1511307595286" expanded="true" signature="1340:1483" ph="{...}" />
-            <marker date="1511307595286" expanded="true" signature="1552:1844" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -809,14 +803,15 @@
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <marker date="1511307595270" expanded="true" signature="541:547" ph="{...}" />
+            <element signature="e#503#504#0" expanded="true" />
+            <element signature="e#546#547#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/services/parentizadores/ParentizadorPorProgramacaoDinamica.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="374">
           <caret line="22" column="41" lean-forward="false" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -826,7 +821,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/services/Log.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
+        <state relative-caret-position="374">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
@@ -834,8 +829,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/services/parentizadores/ParentizadorPorAlgoritmoGuloso.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="36" column="27" lean-forward="false" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+        <state relative-caret-position="68">
+          <caret line="30" column="42" lean-forward="false" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

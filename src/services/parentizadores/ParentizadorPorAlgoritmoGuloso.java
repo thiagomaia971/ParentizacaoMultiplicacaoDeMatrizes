@@ -23,7 +23,18 @@ public class ParentizadorPorAlgoritmoGuloso implements IParentizador {
         }
     }
 
-    // n = (j - i)  => (1, p.length - 1)
+    /***
+     * n = (j - i)  => (1, p.length - 1)
+     * Equação de recorrencia: T(n) = 2T(n/2) + n (?)
+     * Divisão: sempre escolhendo um K e dividindo o problema em (i, k) e (k + 1, j)
+     * Conquista: Somatório da divisão
+     * Tudo antes da divisão => Teta(n)(?)
+     *
+     * @param p
+     * @param i
+     * @param j
+     * @return
+     */
     private int c(int[] p, int i, int j) {
         if (i == j) {
             Log.print("A" + i);
