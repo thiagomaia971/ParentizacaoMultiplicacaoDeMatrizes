@@ -29,6 +29,7 @@ public class Log {
     public static void println(String mensagem) {
         System.out.println(mensagem);
         File file = new File(GlobalVariables.LOCAL_LOG + "RESULTADO_" + identificador() + ".txt");
+        
         try {
             if (!file.exists())
                 file.createNewFile();
