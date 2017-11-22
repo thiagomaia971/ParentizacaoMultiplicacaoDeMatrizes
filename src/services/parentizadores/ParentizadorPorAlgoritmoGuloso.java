@@ -34,7 +34,7 @@ public class ParentizadorPorAlgoritmoGuloso implements IParentizador {
 
         for (int k = i; k < j - i + 1; k++) {  // n + 1
             int x = p[i - 1] * p[k] * p[j];    // n
-            if (x < valor){                    
+            if (x < valor){
                 valor = x;
                 auxK = k;
             }
