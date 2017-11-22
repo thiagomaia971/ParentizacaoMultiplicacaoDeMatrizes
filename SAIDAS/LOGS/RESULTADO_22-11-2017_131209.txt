@@ -1,0 +1,14 @@
+Pasta onde está localizado os arquivos input's: 
+D:\Fontes\ParentizacaoMultiplicacaoDeMatrizes\ENTRADAS/
+
+Arquivos localizados: 
+1. entrada.txt
+
+Arquivo selecionado:
+entrada.txt
+Iniciando algoritmo por Programação Dinâmica!
+
+##Parentização de Matrizes por Algoritmo Guloso: 
+(A1A2) 42
+(A1(A2A3)) 54
+((A1A2)(A3A4)) 42

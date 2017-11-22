@@ -2,24 +2,18 @@ package services.parentizadores;
 
 import entities.ArquivoEntrada;
 import entities.DadoIntancia;
-import entities.Matriz;
-import entities.Parentizacao;
 import interfaces.IParentizador;
 import services.Log;
-
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
 
 public class ParentizadorPorAlgoritmoGuloso implements IParentizador {
     @Override
     public void processarArquivo(ArquivoEntrada arquivosDeEntrada) {
-        Log.println("\n##Parentização de Matrizes por Algoritmo Guloso: ");
+        Log.println("\n##Parentização de Matrizes por Algoritmo Guloso!!");
 
         for (DadoIntancia instancia : arquivosDeEntrada.getInstancias()) {
             int[] p = instancia.getValues();
-
-            Log.println(" " + c(p, 1, p.length - 1));
+            int resultado = algoritmoGuloso(p, 1, p.length - 1);
+            Log.println(" " + resultado);
         }
     }
 
@@ -30,12 +24,14 @@ public class ParentizadorPorAlgoritmoGuloso implements IParentizador {
      * Conquista: Somatório da divisão
      * Tudo antes da divisão => Teta(n)(?)
      *
+     * Caso
+     *
      * @param p
      * @param i
      * @param j
      * @return
      */
-    private int c(int[] p, int i, int j) {
+    private int algoritmoGuloso(int[] p, int i, int j) {
         if (i == j) {
             Log.print("A" + i);
             return 0;
@@ -52,8 +48,8 @@ public class ParentizadorPorAlgoritmoGuloso implements IParentizador {
         }
 
         Log.print("(");
-        valor += c(p, i, auxK);
-        valor += c(p, auxK + 1, j);
+        valor += algoritmoGuloso(p, i, auxK);
+        valor += algoritmoGuloso(p, auxK + 1, j);
         Log.print(")");
 
         return valor;
