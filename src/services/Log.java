@@ -12,10 +12,12 @@ import java.util.Date;
 
 public class Log {
     private static Date date = new Date();
+    private static final String PATH = GlobalVariables.LOCAL_LOG + "RESULTADO_" + identificador() + ".txt";
+//    private static final String PATH = GlobalVariables.LOCAL_LOG + "saida" + ".txt";
 
     public static void print(String mensagem) {
         System.out.print(mensagem);
-        File file = new File(GlobalVariables.LOCAL_LOG + "RESULTADO_" + identificador() + ".txt");
+        File file = new File(PATH);
 
         try (FileWriter out = new FileWriter(file, true)) {
             out.append(mensagem);
@@ -28,7 +30,7 @@ public class Log {
 
     public static void println(String mensagem) {
         System.out.println(mensagem);
-        File file = new File(GlobalVariables.LOCAL_LOG + "RESULTADO_" + identificador() + ".txt");
+        File file = new File(PATH);
         
         try {
             if (!file.exists())

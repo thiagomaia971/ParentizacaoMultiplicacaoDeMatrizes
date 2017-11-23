@@ -24,7 +24,9 @@ public class ParentizadorPorAlgoritmoGuloso implements IParentizador {
      * Conquista: Somatório da divisão
      * Tudo antes da divisão => Teta(n)(?)
      *
-     * Caso
+     * Caso sempre o k = i for o menor valor, o seguinte codigo vai ser executado somente uma ver por cada chamada ao método:
+     *     valor = x;
+     *     auxK = k;
      *
      * @param p
      * @param i
@@ -36,11 +38,11 @@ public class ParentizadorPorAlgoritmoGuloso implements IParentizador {
             Log.print("A" + i);
             return 0;
         }
-        int valor = p[i - 1] * p[i] * p[j];
-        int auxK = i;
+        int valor = Integer.MAX_VALUE;
+        int auxK = -1;
 
-        for (int k = i; k < j - i + 1; k++) {  // n + 1
-            int x = p[i - 1] * p[k] * p[j];    // n
+        for (int k = i; k < j; k++) {
+            int x = p[i - 1] * p[k] * p[j];
             if (x < valor){
                 valor = x;
                 auxK = k;

@@ -38,17 +38,17 @@ public class ParentizadorPorProgramacaoDinamica implements IParentizador {
         }
 
         printar(s, 1, p.length - 1);
-        System.out.println(" " + m[1][p.length - 1]);
+        Log.println(" " + m[1][p.length - 1]);
     }
 
     private void printar(int[][] s, int i, int j) {
         if (i == j)
-            System.out.print("A" + i);
+            Log.print("A" + i);
         else {
-            System.out.print("(");
+            Log.print("(");
             printar(s, i, s[i][j]);
             printar(s, s[i][j] + 1, j);
-            System.out.print(")");
+            Log.print(")");
         }
     }
 
